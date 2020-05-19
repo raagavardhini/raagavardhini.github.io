@@ -15,12 +15,6 @@ body{
     text-decoration: none;
     text-transform: uppercase;
 }
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
 .nav-links{
     width: 100%;
     overflow: auto;
@@ -68,6 +62,14 @@ img{
         border: none; 
         cursor: pointer; 
     }  
+
+[data-component="slideshow"] .slide {
+    display: none;
+  }
+
+  [data-component="slideshow"] .slide.active {
+    display: block;
+  }
 .faculty_names{
     background-color: bisque;
     padding:10px;
@@ -86,15 +88,17 @@ img{
     text-decoration: none;
     font-size: 20px;
 }
-.latest-news::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 .news{
-    float: left;
-    width: 32%;
-    padding: 5px;
+  float: left;
+  width: 32%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.latest-news::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 h3{
     display: block;
